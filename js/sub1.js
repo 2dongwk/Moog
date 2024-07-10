@@ -44,7 +44,7 @@ $(document).ready(function(){
 
     $(window).resize(function(){
         d=$('.slider_img li').height()
-        d=d*0.8
+        d=d*0.9
         $('.slider').css({'height':d})
     })
 
