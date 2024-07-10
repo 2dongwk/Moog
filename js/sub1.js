@@ -63,8 +63,5 @@ $(document).ready(function(){
         .siblings('li:first').stop().animate({'top':'0', 'opacity':'1'},1600,function(){
             $('.slider_text li:gt(0)').css({'display':'block', 'top':'6%', 'opacity':'0'})
         })
-
     },5000)
-
-    
 })

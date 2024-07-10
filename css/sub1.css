@@ -5,8 +5,8 @@ li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 img {width: 100%;}
 
-body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff;}
-.slider_text a, section h4, .content2 {font-family: termina, sans-serif;}
+body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff; letter-spacing: -0.02em;}
+.slider_text a, section h4, .content2 {font-family: termina, sans-serif; letter-spacing: -0.04em;}
 .content2 h3 {font-family: "Newsreader", serif; font-optical-sizing: auto; font-weight: 300; font-style: normal;}
 
 .clearfix::after {display: block; content:""; clear: both;}
@@ -85,6 +85,82 @@ nav a {color: #eeeeee;}
     opacity: 0.5;
     mix-blend-mode: screen;
     cursor: pointer;
+    transition-duration: 0.3s;
 }
 
 .next {left: calc(100% - 80px);}
+
+.prev:hover, .next:hover {opacity: 0.8;}
+
+.content1 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.content1 h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+}
+
+.content1 h4 span {
+    display: block;
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.con1_title {
+    width: 100%;
+    margin-top: 60px;
+    position: relative;
+    height: 200px;
+    border-bottom: 1px solid #999999
+}
+
+.con1_title h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-variation-settings: "slnt" 0, "wght" 600;
+}
+
+.con1_filter {margin: 60px 0;}
+
+.con1_filter ul {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con1_filter li {
+    font-size: 50px;
+    font-variation-settings: "slnt" 0, "wght" 600;
+    text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff;
+    color: #000000;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+.con1_filter li:hover {
+    text-shadow: none;
+    color: #ffffff;
+}
+
+.con1_main ul, .con1_sub ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.con1_main li {
+    width: 49%;
+    position: relative;
+}
+
+/* .con1_main a */
+
+.con1_sub li {
+    width: 32%;
+}

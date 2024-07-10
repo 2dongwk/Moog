@@ -15,10 +15,8 @@ footer {
     border-top: 1px solid #777777;
 }
 
-footer a:hover {
-    opacity: 0.6;
-    transition-duration: 0.2s;
-}
+footer a {transition-duration: 0.2s;}
+footer a:hover {opacity: 0.6;}
 
 .foot_wrap {
     width: 90%;
