@@ -73,3 +73,19 @@ nav a {color: #eeeeee;}
     color: #999999;
     mix-blend-mode: screen;
 }
+
+.prev, .next {
+    width: 80px;
+    height: 50%;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    mix-blend-mode: screen;
+    cursor: pointer;
+}
+
+.next {left: calc(100% - 80px);}
