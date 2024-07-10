@@ -159,7 +159,20 @@ nav a {color: #eeeeee;}
     position: relative;
 }
 
-/* .con1_main a */
+.con1_main h4 {
+    position: absolute;
+    left: 6%;
+    bottom: 10%;
+    font-size: 22px;
+}
+
+.con1_main .gradient_box {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+}
 
 .con1_sub li {
     width: 32%;

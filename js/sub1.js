@@ -64,4 +64,10 @@ $(document).ready(function(){
             $('.slider_text li:gt(0)').css({'display':'block', 'top':'6%', 'opacity':'0'})
         })
     },5000)
+
+    $('.con1_main li').mouseover(function(){
+        $(this).find('img').stop().animate({'opacity':'0.6'},80)
+    }).mouseout(function(){
+        $(this).find('img').stop().animate({'opacity':'1'},80)
+    })
 })
