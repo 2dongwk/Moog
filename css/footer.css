@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {width: 100%;}
+body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff;}
+.foot_top h4, .foot_btm p {font-family: termina, sans-serif;}
+
+.clearfix::after {display: block; content:""; clear: both;}
+
+footer {
+    height: 520px;
+    background-color: #131313;
+    border-top: 1px solid #777777;
+}
+
+footer a:hover {
+    opacity: 0.6;
+    transition-duration: 0.2s;
+}
+
+.foot_wrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.foot_top {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot_top h4 {
+    margin-bottom: 30px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.foot_top li {margin: 20px 0;}
+
+.foot_top li a, .foot_mid div, .foot_btm {
+    font-variation-settings: "slnt" 0, "wght" 200;
+}
+
+.foot_mid {margin: 50px 0;}
+
+.foot_mid div {
+    margin-right: 40px;
+    float: left;
+    font-size: 14px;
+    font-variation-settings: "slnt" 0, "wght" 200;
+    line-height: 22px;
+}
+
+.foot_mid div:nth-child(4), .foot_mid form {float: right;}
+
+.foot_mid form {position: relative;}
+
+.foot_mid input {
+    width: 150px;
+    margin-top: -6px;
+    padding: 16px 20px;
+    background-color: #131313;
+    border: 1px solid #777777;
+    color: #ffffff;
+}
+
+.foot_mid input:hover {border: 1px solid #bbbbbb;}
+
+.foot_mid input::placeholder {
+    font-size: 16px;
+    color: #777777;
+}
+
+.foot_mid input:focus {
+    border: 1px solid #bbbbbb;
+    outline: none;
+}
+
+.foot_mid input[type='email'] {padding-right: 100px;}
+
+.foot_mid input[type='submit'] {
+    width: fit-content;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background-color: #272727;
+    border: none;
+    color: #777777;
+    cursor: pointer;
+}
+
+.foot_mid input[type='submit']:hover {
+    background-color: #202020;
+    border: none;
+}
+
+.foot_mid input[type='submit']:focus {
+    background-color: #161616;
+    border: none;
+}
+
+.foot_btm {
+    margin-bottom: 60px;
+    position: relative;
+    height: 36px;
+    font-size: 10px;
+}
+
+.f_logo, .foot_btm p {float: left;}
+
+.f_logo {width: 36px;}
+
+.foot_btm p {
+    margin-left: 20px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.sns {
+    width: 180px;
+    height: 36px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sns div svg {width: 30px;}
+
+.terms {
+    float: right;
+    line-height: 36px;
+}
+
+.terms a {margin-left: 20px;}
