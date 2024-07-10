@@ -4,7 +4,8 @@ $(document).ready(function(){
         c = 0,
         d = 0;
 
-    $('.slider_img li:gt(0)').css({'opacity':'0.5'})
+    $('.slider_img li:gt(0)').css({'opacity':'0.4'})
+    $('.slider_text li').css({'top':'6%', 'opacity':'0'})
         
     //---------------   헤더   ---------------
     $('h1, .con1_main>img').css({'opacity':'0'})
@@ -48,13 +49,22 @@ $(document).ready(function(){
         $('.slider').css({'height':d})
     })
 
+    $('.slider_text li').eq(0).animate({'top':'0', 'opacity':'1'},1600)
 
     setInterval(function(){
         $('.slider_img').animate({'left':'-100%'},1600,function(){
             $('.slider_img li:first').appendTo('.slider_img')
             $('.slider_img').css({'left':'0'})
         })
-        $('.slider_img li:first').stop().animate({'opacity':'0.5'},2000)
+        $('.slider_img li:first').stop().animate({'opacity':'0.4'},2000)
         .siblings('li:first').stop().animate({'opacity':'1'},2000)
+
+        $('.slider_text li:first').stop().fadeOut(200).appendTo('.slider_text')
+        .siblings('li:first').stop().animate({'top':'0', 'opacity':'1'},1600,function(){
+            $('.slider_text li:gt(0)').css({'display':'block', 'top':'6%', 'opacity':'0'})
+        })
+
     },5000)
+
+    
 })

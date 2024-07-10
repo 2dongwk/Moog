@@ -50,7 +50,6 @@ nav a {color: #eeeeee;}
     position: absolute;
     left: 8%;
     bottom: 0;
-    display: none;
 }
 
 .slider_text li:nth-child(4) {display: block;}
