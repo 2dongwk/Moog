@@ -5,5 +5,15 @@ li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 img {width: 100%;}
 
-body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff;}
-h2 {font-family: termina, sans-serif;}
+body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff; letter-spacing: -0.02em;}
+/* {font-family: termina, sans-serif; letter-spacing: -0.04em;} */
+
+.clearfix::after {display: block; content:""; clear: both;}
+
+nav, .h_logo {mix-blend-mode: normal;}
+
+nav li {font-variation-settings: "slnt" 0, "wght" 300;}
+nav li:nth-child(4) {font-variation-settings: "slnt" 0, "wght" 700;}
+nav li:nth-child(4) a {opacity: 1;}
+
+nav a {color: #eeeeee;}
