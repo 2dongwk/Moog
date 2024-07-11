@@ -4,7 +4,7 @@ $(document).ready(function(){
         c = 0,
         d = 0;
 
-    $('.slider_img li:gt(0)').css({'opacity':'0.4'})
+    $('.slider_img li').css({'opacity':'0.4'}).eq(0).css({'opacity':'0.1'})
     $('.slider_text li').css({'top':'6%', 'opacity':'0'})
         
     //---------------   헤더   ---------------
@@ -49,7 +49,8 @@ $(document).ready(function(){
         $('.slider').css({'height':d})
     })
 
-    $('.slider_text li').eq(0).animate({'top':'0', 'opacity':'1'},1600)
+    $('.slider_img li:first').animate({'opacity':'1'},1200)
+    $('.slider_text li:first').animate({'top':'0', 'opacity':'1'},1600)
 
     setInterval(function(){
         $('.slider_img').animate({'left':'-100%'},1600,function(){
@@ -66,6 +67,11 @@ $(document).ready(function(){
     },5000)
 
     $('.con1_main li').mouseover(function(){
+        $(this).find('img').stop().animate({'opacity':'0.6'},80)
+    }).mouseout(function(){
+        $(this).find('img').stop().animate({'opacity':'1'},80)
+    })
+    $('.con1_sub a').mouseover(function(){
         $(this).find('img').stop().animate({'opacity':'0.6'},80)
     }).mouseout(function(){
         $(this).find('img').stop().animate({'opacity':'1'},80)

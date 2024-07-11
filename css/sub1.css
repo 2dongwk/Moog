@@ -7,7 +7,6 @@ img {width: 100%;}
 
 body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff; letter-spacing: -0.02em;}
 .slider_text a, section h4, .content2 {font-family: termina, sans-serif; letter-spacing: -0.04em;}
-.content2 h3 {font-family: "Newsreader", serif; font-optical-sizing: auto; font-weight: 300; font-style: normal;}
 
 .clearfix::after {display: block; content:""; clear: both;}
 
@@ -138,7 +137,7 @@ nav a {color: #eeeeee;}
 .con1_filter li {
     font-size: 50px;
     font-variation-settings: "slnt" 0, "wght" 600;
-    text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff;
+    text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff;
     color: #000000;
     transition-duration: 0.1s;
     cursor: pointer;
@@ -176,4 +175,93 @@ nav a {color: #eeeeee;}
 
 .con1_sub li {
     width: 32%;
+    margin-top: 3%;
 }
+
+.con1_sub h4 {margin-top: 20px;}
+
+.con1_video {
+    margin: 10% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.videobox {
+    width: 55%;
+    aspect-ratio: 1 / 0.5623;
+    position: relative;
+}
+
+.videobox div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.con1_textbox {
+    width: 40%;
+    height: fit-content;
+}
+
+.con1_textbox h4 {
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.con1_textbox span {margin-bottom: 8px;}
+
+.con1_textbox p {
+    font-variation-settings: "slnt" 0, "wght" 200;
+    letter-spacing: 0;
+    line-height: 24px;
+    color: #999999;
+}
+
+.content2 {
+    padding: 300px 0;
+    position: relative;
+    background: url(../img/sub1/6.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gradient_box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+}
+
+.con2_textbox {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content2 h3 {
+    font-family: "Newsreader", serif;
+    font-size: 40px;
+    font-variation-settings: "slnt" 0, "wght" 200;
+}
+
+.content2 p {
+    margin: 60px 0 80px 0;
+    font-weight: 100;
+    line-height: 28px;
+    letter-spacing: 0;
+}
+
+.content2 a {
+    text-decoration: underline;
+    transition-duration: 0.15s;
+}
+
+.content2 a:hover {opacity: 0.6;}
