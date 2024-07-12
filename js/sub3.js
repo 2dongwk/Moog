@@ -1,7 +1,13 @@
 $(document).ready(function(){
     var a = 0,
         b = 0,
-        c = 0;
+        c = 0,
+        d = 0,
+        e = 0,
+        f = 0,
+        g = 0,
+        h = 0,
+        i = 0;
 
     //---------------   헤더   ---------------
     $('h1, .con1_main>img').css({'opacity':'0'})
@@ -35,5 +41,48 @@ $(document).ready(function(){
     })
 
     //---------------   sub3 콘텐츠   ---------------
-    
+    d=$('.img1').height()
+    e=$('.products li:first').height()
+    f=(d*2)+(e-d)
+    $('.img7').css({'height':f})
+
+    g=$('article').height()
+    h=(g/3)*2
+    $('.divided').css({'height':h})
+
+    $('.read_more').click(function(){
+        $('article').removeClass('divided').css({'height':g})
+        $('.page_divider').css({'display':'none'})
+    })
+
+    $('.filter li').eq(0).find('div').delay(450).animate({'top':'-6px'},300,function(){
+        $(this).animate({'top':'0'},150)
+    })
+    $('.filter li').eq(1).find('div').delay(520).animate({'top':'-6px'},300,function(){
+        $(this).animate({'top':'0'},150)
+    })
+    $('.filter li').eq(2).find('div').delay(590).animate({'top':'-6px'},300,function(){
+        $(this).animate({'top':'0'},150)
+    })
+    $('.filter li').eq(3).find('div').delay(660).animate({'top':'-6px'},300,function(){
+        $(this).animate({'top':'0'},150)
+    })
+    $('.filter li').eq(4).find('div').delay(730).animate({'top':'-6px'},300,function(){
+        $(this).animate({'top':'0'},150)
+    })
+
+    $('article').css({'opacity':'0'})
+    $('article').delay(1700).animate({'opacity':'1'},600)
+
+    $(window).resize(function(){
+        d=$('.img1').height()
+        e=$('.products li:first').height()
+        f=(d*2)+(e-d)
+        $('.img7').css({'height':f})
+
+        $('.read_more').click(function(){
+            $('article').removeClass('divided').css({'height':g})
+            $('.page_divider').css({'display':'none'})
+        })
+    })
 })

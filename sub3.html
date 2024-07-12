@@ -39,37 +39,20 @@
         
         <div class="filter">
             <ul>
-                <li>Synthesizers</li>
-                <li>Theremins</li>
-                <li>Software</li>
-                <li>Accessories</li>
-                <li>Legacy products</li>
+                <li><div>Synthesizers</div></li>
+                <li><div>Theremins</div></li>
+                <li><div>Software</div></li>
+                <li><div>Accessories</div></li>
+                <li><div>Legacy products</div></li>
             </ul>
-            <div class="sub_filter">
-                <p>Filter 
-                    <span>
-                        <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0V2H8V0H0Z" fill="black"/>
-                        </svg>
-                        <svg width="8" height="2" viewBox="0 0 8 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0V2H8V0H0Z" fill="black"/>
-                        </svg>
-                    </span>
-                </p>
-                <select name="sub_filter" id="">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </div>
         </div>
 
         <section>
-            <article>
+            <div class="borderline"></div>
+            <article class="divided">
                 <h2>Synthesizers</h2>
                 <div class="products">
-                    <ul>
+                    <ul class="clearfix">
                         <li>
                             <a href="#none">
                                 <div class="img img1"></div>
@@ -93,7 +76,7 @@
                                 <div class="img img3"></div>
                                 <div class="text">
                                     <h3>GRANDMOTHER</h3>
-                                    <p>$ 1,609.00 <span>$ 1,699.00</span></p>
+                                    <p>$ 1,609.00 <span class="discount">$ 1,699.00</span></p>
                                 </div>
                             </a>
                         </li>
@@ -119,11 +102,13 @@
                             <a href="#none">
                                 <div class="img_wrap">
                                     <div class="img img6"></div>
-                                    <div class="sub_img"></div>
+                                    <div class="img sub_img"></div>
                                 </div>
                                 <div class="text">
-                                    <h3>MOOG MODULAR SYSTEMS</h3>
-                                    <p>$ Inquiry</p>
+                                    <div class="text_group">
+                                        <h3>MOOG MODULAR SYSTEMS</h3>
+                                        <p>$ Inquiry</p>
+                                    </div>
                                     <p class="detail">Moog modular systems are hand-built analog instruments brought to life utilizing original documentation, circuit board and art files, and manufacturing methods. Available in highly-limited limited quantities, these are the only true recreations of classic Moog modular instruments. Previously released instruments include the Model 15, System 35, System 55, and the Synthesizer IIIc.</p>
                                 </div>
                             </a>
@@ -137,42 +122,45 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="#none">
-                                <div class="img img8"></div>
-                                <div class="text">
-                                    <h3>DFAM</h3>
-                                    <p>$ 899.00</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#none">
-                                <div class="img img9"></div>
-                                <div class="text">
-                                    <h3>SUBSEQUENT 25</h3>
-                                    <p>$ 1,799.00</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#none">
-                                <div class="img img10"></div>
-                                <div class="text">
-                                    <h3>SIRIN</h3>
-                                    <span>SOLD OUT</span>
-                                    <p>$ 599.00</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#none">
-                                <div class="img img11"></div>
-                                <div class="text">
-                                    <h3>MAVIS</h3>
-                                    <p>$ 449.00</p>
-                                </div>
-                            </a>
+                        <li class="long_height_wrap">
+                            <ul>
+                                <li>
+                                    <a href="#none">
+                                        <div class="img img8"></div>
+                                        <div class="text">
+                                            <h3>DFAM</h3>
+                                            <p>$ 899.00</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <div class="img img9"></div>
+                                        <div class="text">
+                                            <h3>SUBSEQUENT 25</h3>
+                                            <p>$ 1,799.00</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <div class="img img10"></div>
+                                        <div class="text">
+                                            <h3>SIRIN<span class="sold_out">SOLD OUT</span></h3>
+                                            <p>$ 599.00</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none">
+                                        <div class="img img11"></div>
+                                        <div class="text">
+                                            <h3>MAVIS</h3>
+                                            <p>$ 449.00</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#none">
@@ -187,18 +175,20 @@
                             <a href="#none">
                                 <div class="img img13"></div>
                                 <div class="text">
-                                    <h3>MATRIARCH</h3>
-                                    <p>$ 3,199.00</p>
+                                    <div class="text_group">
+                                        <h3>MATRIARCH</h3>
+                                        <p>$ 3,199.00</p>
+                                    </div>
                                     <p class="detail">Matriarch is a patchable 4-note paraphonic analog synthesizer with a built-in Sequencer, Arpeggiator, stereo Ladder Filters, and stereo Analog Delay.</p>
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="page_divider">
-                    <div class="read_more">Read More</div>
-                </div>
             </article>
+            <div class="page_divider">
+                <div class="read_more">Read More</div>
+            </div>
         </section>
         
         <footer>
