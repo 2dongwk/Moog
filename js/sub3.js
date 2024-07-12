@@ -55,24 +55,24 @@ $(document).ready(function(){
         $('.page_divider').css({'display':'none'})
     })
 
-    $('.filter li').eq(0).find('div').delay(450).animate({'top':'-6px'},300,function(){
+    $('.filter li').eq(0).find('div').delay(450).animate({'top':'-6px'},250,function(){
         $(this).animate({'top':'0'},150)
     })
-    $('.filter li').eq(1).find('div').delay(520).animate({'top':'-6px'},300,function(){
+    $('.filter li').eq(1).find('div').delay(500).animate({'top':'-6px'},250,function(){
         $(this).animate({'top':'0'},150)
     })
-    $('.filter li').eq(2).find('div').delay(590).animate({'top':'-6px'},300,function(){
+    $('.filter li').eq(2).find('div').delay(550).animate({'top':'-6px'},250,function(){
         $(this).animate({'top':'0'},150)
     })
-    $('.filter li').eq(3).find('div').delay(660).animate({'top':'-6px'},300,function(){
+    $('.filter li').eq(3).find('div').delay(600).animate({'top':'-6px'},250,function(){
         $(this).animate({'top':'0'},150)
     })
-    $('.filter li').eq(4).find('div').delay(730).animate({'top':'-6px'},300,function(){
+    $('.filter li').eq(4).find('div').delay(650).animate({'top':'-6px'},250,function(){
         $(this).animate({'top':'0'},150)
     })
 
-    $('article').css({'opacity':'0'})
-    $('article').delay(1700).animate({'opacity':'1'},600)
+    $('article, .read_more').css({'opacity':'0'})
+    $('article, .read_more').delay(1700).animate({'opacity':'1'},600)
 
     $(window).resize(function(){
         d=$('.img1').height()
