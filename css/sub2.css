@@ -126,7 +126,7 @@ nav a {color: #eeeeee;}
     aspect-ratio: 1 / 0.6;
     position: absolute;
     right: 0;
-    background: url(../img/sub2/content1.jpg) no-repeat;
+    background: url(../img/sub2/content1.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -150,7 +150,7 @@ nav a {color: #eeeeee;}
     aspect-ratio: 1 / 1.4;
     position: absolute;
     left: 3%;
-    background: url(../img/sub2/content2.jpg) no-repeat;
+    background: url(../img/sub2/content2.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -186,7 +186,7 @@ nav a {color: #eeeeee;}
     position: absolute;
     right: 4%;
     bottom: 0;
-    background: url(../img/sub2/content3.jpg) no-repeat;
+    background: url(../img/sub2/content3.webp) no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 50%;

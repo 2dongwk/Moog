@@ -184,7 +184,7 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 .con2_l_img {
     margin-bottom: 20px;
     aspect-ratio: 1 / 1;
-    background: url(../img/main/4.jpeg) no-repeat;
+    background: url(../img/main/4.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -192,7 +192,7 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 .con2_s_img1 {
     margin-top: 80%;
     aspect-ratio: 1 / 1;
-    background: url(../img/main/6.jpg) no-repeat;
+    background: url(../img/main/6.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -200,14 +200,14 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 .con2_s_img2 {
     margin-top: -56%;
     aspect-ratio: 1 / 1;
-    background: url(../img/main/7.jpg) no-repeat;
+    background: url(../img/main/7.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .con2_s_img3 {
     aspect-ratio: 1 / 1;
-    background: url(../img/main/5.jpg) no-repeat;
+    background: url(../img/main/5.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -215,7 +215,7 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 .con2_s_img4 {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background: url(../img/main/8.jpg) no-repeat;
+    background: url(../img/main/8.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
