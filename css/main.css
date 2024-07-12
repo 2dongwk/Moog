@@ -166,8 +166,8 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 }
 
 .con2_text span {
-    display: block;
     margin: 22px 0;
+    display: block;
     font-size: 16px;
     font-variation-settings: "slnt" 0, "wght" 500;
 }

@@ -5,12 +5,13 @@ li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 img {width: 100%;}
 
-body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff; letter-spacing: -0.02em;}
-/* {font-family: termina, sans-serif; letter-spacing: -0.04em;} */
+body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff; letter-spacing: -0.01em;}
+section {line-height: 1.6em;}
+.text_hooking {font-family: termina, sans-serif; letter-spacing: -0.04em; line-height: 1.4em;}
 
 .clearfix::after {display: block; content:""; clear: both;}
 
-nav, .h_logo {mix-blend-mode: normal;}
+nav, .h_logo {mix-blend-mode: difference;}
 
 nav li {font-variation-settings: "slnt" 0, "wght" 300;}
 nav li:nth-child(2) {font-variation-settings: "slnt" 0, "wght" 700;}
@@ -18,3 +19,301 @@ nav li:nth-child(2) a {opacity: 1;}
 
 nav a {color: #eeeeee;}
 
+.slider {
+    width: 100%;
+    aspect-ratio: 1 / 0.4;
+    padding: 12% 0 5% 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider ul {
+    width: 400%;
+    position: absolute;
+    left: 0;
+    display: flex;
+}
+
+.slider li {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider li img {width: 40%;}
+
+.slider h2 {
+    width: 100%;
+    position: absolute;
+    top: 16%;
+    font-size: 60px;
+    font-variation-settings: "slnt" 0, "wght" 600;
+    letter-spacing: -0.03em;
+    text-align: center;
+    user-select: none;
+}
+
+.slider h2 span {
+    color: #000000;
+    text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff;
+}
+
+.slider h2:nth-child(2) {
+    top: 62%;
+    font-size: 120px;
+    z-index: 1;
+}
+
+.content1 {
+    width: 100%;
+    padding-top: 3%;
+    position: relative;
+    background-color: #ffffff;
+    color: #000000;
+    overflow: hidden;
+}
+
+.text_carousel {
+    width: max-content;
+    position: absolute;
+    left: 0;
+    display: flex;
+}
+
+.carousel_group {
+    width: max-content;
+    display: flex;
+}
+
+.carousel_group p {
+    width: max-content;
+    margin-right: 30px;
+    font-variation-settings: "slnt" 0, "wght" 600;
+}
+
+.text_hooking {
+    width: 60%;
+    margin: 140px auto;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.con1_top {
+    margin-bottom: 10%;
+    position: relative;
+}
+
+.con1_top_icon {
+    width: fit-content;
+    margin-bottom: 2%;
+}
+
+.text_wrap {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.con1_top .text_wrap {
+    width: 30%;
+    left: 9%;
+}
+
+.con1_top_img {
+    width: 55%;
+    aspect-ratio: 1 / 0.6;
+    position: absolute;
+    right: 0;
+    background: url(../img/sub2/content1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.text_wrap h3 {
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-variation-settings: "slnt" 0, "wght" 600;
+    line-height: 1.4em;
+}
+
+.text_wrap p {font-variation-settings: "slnt" 0, "wght" 300;}
+
+.con1_btm {
+    margin-bottom: 200px;
+    position: relative;
+}
+
+.con1_btm_img1 {
+    width: 45%;
+    aspect-ratio: 1 / 1.4;
+    position: absolute;
+    left: 3%;
+    background: url(../img/sub2/content2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.con1_btm .text_wrap {
+    width: 40%;
+    right: 6%;
+}
+
+.text_wrap .info {margin-top: 50px;}
+
+.text_wrap .info a {
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 16px;
+    position: relative;
+    font-size: 20px;
+    font-variation-settings: "slnt" 0, "wght" 400;
+    transition-duration: 0.1s;
+}
+
+.text_wrap .info a:hover {opacity: 0.5;}
+
+.info span {
+    position: absolute;
+    top: 1px;
+    left: -30px;
+}
+
+.con1_btm_img2 {
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    right: 4%;
+    bottom: 0;
+    background: url(../img/sub2/content3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.content2 {width: 100%;}
+
+.virtual {
+    width: 100%;
+    aspect-ratio: 1 / 0.6;
+    position: relative;
+}
+
+.virtual h2 {
+    width: 100%;
+    position: absolute;
+    top: -29px;
+    font-size: 60px;
+    font-variation-settings: "slnt" 0, "wght" 600;
+    letter-spacing: -0.03em;
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+    text-align: center;
+    user-select: none;
+    z-index: 1;
+}
+
+.virtual h2:nth-child(2) {
+    top: 50px;
+    font-size: 100px;
+}
+
+.virtual_wrap {
+    width: 90%;
+    aspect-ratio: 1 / 0.5;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.con2_top {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.con2_top .text_wrap {
+    width: 50%;
+    top: 0;
+    transform: translate(0, 0);
+}
+
+.con2_top .text_wrap {left: 0;}
+
+.con2_top .text_wrap p {margin-bottom: 24px;}
+
+.con2_slider {
+    width: 45%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.con2_slider ul {
+    width: 100%;
+    position: relative;
+    user-select: none;
+}
+
+.con2_slider li {
+    position: absolute;
+    display: none;
+}
+
+.con2_slider li:nth-child(1) {display: block;}
+
+.btn {
+    margin-top: 10px;
+    float: left;
+    text-align: center;
+}
+
+.btn .prev, .btn .next {
+    width: 20px;
+    float: left;
+    transition-duration: 0.1s;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.next {margin-left: 10px;}
+
+.con2_btm {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.con2_btm .text_wrap {right: 0;}
+
+/* .con2_top .text_wrap p {margin-bottom: 24px;} */
+
+.con2_btm .con2_slider {
+    width: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.con2_btm .btn {float: right;}
+
+.prev:hover, .next:hover {opacity: 1;}
+
+.con2_btm .text_wrap {
+    width: 48%;
+    top: 28%;
+    transform: translate(0, -30%);
+}
+
+.con2_btm .text_wrap h3 {margin-bottom: 20px;}
+
+.content2 .text_wrap .store_hours {
+    width: 220px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-variation-settings: "slnt" 0, "wght" 400;
+    line-height: 1.4em;
+}
+
+.content2 .text_wrap span {text-decoration: underline;}
