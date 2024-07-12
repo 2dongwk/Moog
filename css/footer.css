@@ -4,7 +4,7 @@
 li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 img {width: 100%;}
-body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff;}
+body {font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400;}
 .foot_top h4, .foot_btm p {font-family: termina, sans-serif;}
 
 .clearfix::after {display: block; content:""; clear: both;}
@@ -13,6 +13,7 @@ footer {
     height: 520px;
     background-color: #131313;
     border-top: 1px solid #777777;
+    color: #ffffff;
 }
 
 footer a {transition-duration: 0.2s;}

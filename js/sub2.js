@@ -21,10 +21,6 @@ $(document).ready(function(){
     .siblings('li').eq(3).delay(900).animate({'margin-top':'0', 'opacity':'1'},500)
     .siblings('li').eq(4).delay(1000).animate({'margin-top':'0', 'opacity':'1'},500)
 
-    $('header, .h_logo').mouseover(function(){
-        $('header').addClass('blur')
-    })
-
     a=$(window).width()
     b=$('h1').height()
     $('.h_logo').css({'height':b})

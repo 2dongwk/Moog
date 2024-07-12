@@ -5,7 +5,8 @@ li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 img {width: 100%;}
 
-body {background-color: #000000; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #ffffff; letter-spacing: -0.02em;}
+body {background-color: #ffffff; font-family: inter-variable, sans-serif; font-variation-settings: "slnt" 0, "wght" 400; color: #000000; letter-spacing: -0.02em;}
+section {line-height: 1.6em;}
 /* {font-family: termina, sans-serif; letter-spacing: -0.04em;} */
 
 .clearfix::after {display: block; content:""; clear: both;}
@@ -13,7 +14,94 @@ body {background-color: #000000; font-family: inter-variable, sans-serif; font-v
 nav, .h_logo {mix-blend-mode: normal;}
 
 nav li {font-variation-settings: "slnt" 0, "wght" 300;}
-nav li:nth-child(3) {font-variation-settings: "slnt" 0, "wght" 700;}
+nav li:nth-child(3) {font-variation-settings: "slnt" 0, "wght" 700; color: #000000;}
 nav li:nth-child(3) a {opacity: 1;}
 
-nav a {color: #eeeeee;}
+nav a {
+    color: #000000;
+    opacity: 0.4;
+}
+
+.h_logo path {fill: #000000;}
+.h_logo path:last-child {fill: none; stroke: #000000;}
+
+.filter {
+    width: 88%;
+    height: 500px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.filter li {
+    margin-top: 14px;
+    font-size: 60px;
+    font-variation-settings: "slnt" 0, "wght" 700;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.filter li:nth-child(1), .filter li:hover {
+    color: #000000;
+    text-shadow: none;
+}
+
+section {
+    width: 95%;
+    margin: 0 auto;
+}
+
+article {
+    width: 100%;
+    border-top: 1px solid #000000;
+}
+
+h2 {
+    margin-top: 100px;
+    font-size: 70px;
+    font-variation-settings: "slnt" 0, "wght" 600;
+    letter-spacing: -0.04em;
+    text-align: center;
+}
+
+.products {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.products ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.products li {
+    width: 32%;
+    background-color: red;
+}
+
+.products li.long_width {width: 66%;}
+
+.img {
+    height: 300px;
+    /* 여기부터 재개 */
+}
+
+.img1 {background: url(../img/sub3/1.jpg) no-repeat; background-size: cover; background-position: center;}
+.img2 {background: url(../img/sub3/2.jpg) no-repeat; background-size: cover; background-position: center;}
+.img3 {background: url(../img/sub3/3.jpg) no-repeat; background-size: cover; background-position: center;}
+.img4 {background: url(../img/sub3/4.jpg) no-repeat; background-size: cover; background-position: center;}
+.img5 {background: url(../img/sub3/5.jpg) no-repeat; background-size: cover; background-position: center;}
+.img6 {background: url(../img/sub3/6.jpg) no-repeat; background-size: cover; background-position: center;}
+.img7 {background: url(../img/sub3/7.jpg) no-repeat; background-size: cover; background-position: center;}
+.img8 {background: url(../img/sub3/8.jpg) no-repeat; background-size: cover; background-position: center;}
+.img9 {background: url(../img/sub3/9.jpg) no-repeat; background-size: cover; background-position: center;}
+.img10 {background: url(../img/sub3/10.jpg) no-repeat; background-size: cover; background-position: center;}
+.img11 {background: url(../img/sub3/11.jpg) no-repeat; background-size: cover; background-position: center;}
+.img12 {background: url(../img/sub3/12.jpg) no-repeat; background-size: cover; background-position: center;}
+.img13 {background: url(../img/sub3/13.jpg) no-repeat; background-size: cover; background-position: center;}
