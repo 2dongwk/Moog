@@ -47,7 +47,7 @@ nav a {color: #eeeeee;}
     width: 100%;
     position: absolute;
     top: 16%;
-    font-size: 60px;
+    font-size: 80px;
     font-variation-settings: "slnt" 0, "wght" 600;
     letter-spacing: -0.03em;
     text-align: center;
@@ -61,7 +61,7 @@ nav a {color: #eeeeee;}
 
 .slider h2:nth-child(2) {
     top: 62%;
-    font-size: 120px;
+    font-size: 160px;
     z-index: 1;
 }
 
@@ -317,3 +317,8 @@ nav a {color: #eeeeee;}
 }
 
 .content2 .text_wrap span {text-decoration: underline;}
+
+@media only screen and (max-width: 1440px) {
+    .slider h2 {font-size: 60px;}
+    .slider h2:nth-child(2) {font-size: 120px;}
+}
