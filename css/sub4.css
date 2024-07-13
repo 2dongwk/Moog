@@ -10,7 +10,7 @@ body {background-color: #ffffff; font-family: inter-variable, sans-serif; font-v
 
 .clearfix::after {display: block; content:""; clear: both;}
 
-nav, .h_logo {mix-blend-mode: normal;}
+nav, .h_logo {mix-blend-mode: difference;}
 
 nav li {font-variation-settings: "slnt" 0, "wght" 300;}
 nav li:nth-child(4) {font-variation-settings: "slnt" 0, "wght" 700;}
@@ -23,6 +23,8 @@ nav a {color: #eeeeee;}
     font-size: 14px;
     text-decoration: underline;
 }
+
+.content1 a {font-weight: 500;}
 
 .main a, .content1 a {transition-duration: 0.2s;}
 .main a:hover {opacity: 0.6;}
@@ -166,7 +168,6 @@ h2 {
     width: 100%;
     height: 100%;
     position: relative;
-    
     color: #ffffff;
 }
 

@@ -7,8 +7,10 @@ $(document).ready(function(){
         $h_con1_btm = $('.con1_btm_img1').height(),
         $h_con2_top = $('.con2_top img').height(),
         $h_con2_btm = $('.con2_btm img').height(),
-        $num = 0,
-        e = 0;
+        e = 0,
+        f = 0,
+        g = 0,
+        h = 0;
 
     //---------------   헤더   ---------------
     $('h1, .con1_main>img').css({'opacity':'0'})
@@ -95,13 +97,22 @@ $(document).ready(function(){
     $('.con2_top').css({'height':$h_con2_top})
     $('.con2_btm').css({'height':$h_con2_btm})
 
-    $('.btn').find('div').click(function(){
-        $(this).parent('.btn').parent('.con2_slider').find('li').stop().fadeOut(300)
+    $('.con2_top').find('.btn div').click(function(){
+        $('.con2_top').find('li').stop().fadeOut(300)
         
         e=$(this).index()
-        $num=($num+((-2*e)+3))%4
+        f=(f+((-2*e)+3))%4
         
-        $(this).parent('.btn').parent('.con2_slider').find('li').eq($num).stop().fadeIn(300)
+        $('.con2_top').find('li').eq(f).stop().fadeIn(300)
+    })
+
+    $('.con2_btm').find('.btn div').click(function(){
+        $('.con2_btm').find('li').stop().fadeOut(300)
+        
+        g=$(this).index()
+        h=(h+((-2*g)+3))%4
+        
+        $('.con2_btm').find('li').eq(h).stop().fadeIn(300)
     })
 
     $(window).resize(function(){
