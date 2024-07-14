@@ -103,9 +103,9 @@ h2 {
     background-position: center!important;
 }
 
-.con1_wrap:nth-child(2) .con1_img {background: url(../img/sub4/2.webp) no-repeat;}
-.con1_wrap:nth-child(3) .con1_img {background: url(../img/sub4/3.webp) no-repeat;}
-.con1_wrap:nth-child(4) .con1_img {background: url(../img/sub4/4.webp) no-repeat;}
+.con1_wrap:nth-child(2) .con1_img {background: url(../img/news/2.webp) no-repeat;}
+.con1_wrap:nth-child(3) .con1_img {background: url(../img/news/3.webp) no-repeat;}
+.con1_wrap:nth-child(4) .con1_img {background: url(../img/news/4.webp) no-repeat;}
 
 .con1_text {width: 45%;}
 
@@ -154,15 +154,15 @@ h2 {
 
 .content2 li a:hover {opacity: 1;}
 
-.content2 li:nth-child(1) {background: url(../img/sub4/5.webp) no-repeat;}
-.content2 li:nth-child(2) {background: url(../img/sub4/6.webp) no-repeat;}
-.content2 li:nth-child(3) {background: url(../img/sub4/7.webp) no-repeat;}
-.content2 li:nth-child(4) {background: url(../img/sub4/8.webp) no-repeat;}
-.content2 li:nth-child(5) {background: url(../img/sub4/9.webp) no-repeat;}
-.content2 li:nth-child(6) {background: url(../img/sub4/10.webp) no-repeat;}
-.content2 li:nth-child(7) {background: url(../img/sub4/11.webp) no-repeat;}
-.content2 li:nth-child(8) {background: url(../img/sub4/12.webp) no-repeat;}
-.content2 li:nth-child(9) {background: url(../img/sub4/13.webp) no-repeat;}
+.content2 li:nth-child(1) {background: url(../img/news/5.webp) no-repeat;}
+.content2 li:nth-child(2) {background: url(../img/news/6.webp) no-repeat;}
+.content2 li:nth-child(3) {background: url(../img/news/7.webp) no-repeat;}
+.content2 li:nth-child(4) {background: url(../img/news/8.webp) no-repeat;}
+.content2 li:nth-child(5) {background: url(../img/news/9.webp) no-repeat;}
+.content2 li:nth-child(6) {background: url(../img/news/10.webp) no-repeat;}
+.content2 li:nth-child(7) {background: url(../img/news/11.webp) no-repeat;}
+.content2 li:nth-child(8) {background: url(../img/news/12.webp) no-repeat;}
+.content2 li:nth-child(9) {background: url(../img/news/13.webp) no-repeat;}
 
 .detail {
     width: 100%;
