@@ -1,73 +1,68 @@
 $(document).ready(function(){
-    var a = 0,
-        b = 0,
-        c = 0,
-        d = 0,
-        $s_img = $('.slider_img li'),
-        $s_text = $('.slider_text li'),
-        e = 0,
-        f = 0;
-    
-    $('.slider_img li:first').css({'opacity':'0.4'})
-    $('.slider_text li').css({'top':'6%', 'opacity':'0'})
-        
-    //---------------   헤더   ---------------
-    $('h1, .con1_main>img').css({'opacity':'0'})
     $('h1').delay(1100).animate({'top':'0', 'opacity':'1'},700)
-    $('header li').css({'margin-top':'-30px', 'opacity':'0'})
-    .eq(0).delay(500).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(0).delay(600).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(1).delay(700).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(2).delay(800).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(3).delay(900).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(4).delay(1000).animate({'margin-top':'0', 'opacity':'1'},500)
-
-    a=$(window).width()
-    b=$('h1').height()
-    $('.h_logo').css({'height':b})
-    c=(a/b)/100
-    a=1920-a
-    b=b-(78-((a*c)/2))
     
-    $('.h_logo').css({'top':-b})
+    let s_img_h = $('.slider_img li:first img').height(),
+        s_img = $('.slider_img li'),
+        s_text = $('.slider_text li'),
+        i = 0;
 
-    $(window).resize(function(){
-        a=$(this).width()
-        b=$('h1').height()
-        $('.h_logo').css({'height':b})
-        c=(a/b)/100
-        a=1920-a
-        b=b-(78-((a*c)/2))
-        
-        $('.h_logo').css({'top':-b})
+    $('.slider').css({'height':s_img_h * 0.9})
+
+    $(window).on('scroll',function(){
+        if($(this).scrollTop() < 100){
+            $('.header_bg').removeClass('blur')
+        }else{
+            $('.header_bg').addClass('blur')
+        }
+
+        let scroll = $(window).scrollTop(),
+            window_h = $(window).height(),
+            window_btm = scroll + window_h,
+            con1_filter = $('.con1_filter').offset().top + ($('.con1_filter').height() * 0.3);
+
+        if(window_btm > con1_filter - 50 && window_btm <= con1_filter){
+            $('.borderline').css({'animation-name':'extend'})
+        }else if(window_btm > con1_filter){
+            for(let a = 0; a<6; a++){
+                $('.con1_filter li').eq(a).delay(80*a).css({'filter':'none', 'opacity':'1'},800)
+            }
+            $('.borderline').css({'animation-name':'extend'})
+        }
+
+        let con1_main = $('.con1_main').offset().top + ($('.con1_main').height() * 0.3)
+
+        if(window_btm > con1_main){
+            $('.con1_main').animate({'opacity':'1'},800)
+            $('.con1_sub').delay(400).animate({'opacity':'1'},800)
+        }
+
+        let con1_textbox = $('.con1_textbox').offset().top + ($('.con1_textbox').height() * 0.3);
+
+        if(window_btm > con1_textbox){
+            $('.con1_textbox').animate({'opacity':'1'},800)
+            $('.con1_textbox h4').animate({'margin-top':'0'},800)
+        }
     })
 
-    //---------------   sub1 콘텐츠   ---------------
-    d=$('.slider_img li').height()
-    d=d*0.9
-    $('.slider').css({'height':d})
-
     $(window).resize(function(){
-        d=$('.slider_img li').height()
-        d=d*0.9
-        $('.slider').css({'height':d})
+        $('.slider').css({'height':s_img_h * 0.9})
     })
 
     $('.slider_img li:first').animate({'opacity':'1'},1200)
     $('.slider_text li:first').animate({'top':'0', 'opacity':'1'},1600)
 
     function auto(){
-        $s_img.stop().fadeOut(1800,function(){
-            $(this).eq(e).appendTo('.slider_img')
+        s_img.stop().fadeOut(1800,function(){
+            $(this).eq(i).appendTo('.slider_img')
         })
-        $s_text.stop().animate({'opacity':'0'},200,function(){
-            $s_text.not($s_text.eq(e)).css({'display':'block', 'top':'6%', 'opacity':'0'})
+        s_text.stop().animate({'opacity':'0'},200,function(){
+            s_text.not(s_text.eq(i)).css({'display':'block', 'top':'6%', 'opacity':'0'})
         })
 
-        e=(e+1)%5
+        i=(i+1)%5
         
-        $s_img.eq(e).stop().fadeIn(1800)
-        $s_text.eq(e).stop().animate({'top':'0', 'opacity':'1'},1800)
+        s_img.eq(i).stop().fadeIn(1800)
+        s_text.eq(i).stop().animate({'top':'0', 'opacity':'1'},1800)
     }
 
     autoslide = setInterval(auto, 6000)
@@ -75,20 +70,26 @@ $(document).ready(function(){
     $('.btn').find('div').click(function(){
         clearInterval(autoslide)
         
-        $s_img.stop().fadeOut(600)
-        $s_text.stop().animate({'opacity':'0'},200,function(){
-            $s_text.not($s_text.eq(e)).css({'display':'block', 'top':'6%', 'opacity':'0'})
+        s_img.stop().fadeOut(600)
+        s_text.stop().animate({'opacity':'0'},200,function(){
+            s_text.not(s_text.eq(i)).css({'display':'block', 'top':'6%', 'opacity':'0'})
         })
         
-        f=$(this).index()
-        e=(e+4-(3*f))%5
+        let btn=$(this).index()
+        i=(i+4-(3*btn))%5
 
-        $s_img.eq(e).stop().fadeIn(600)
-        $s_text.eq(e).stop().animate({'top':'0', 'opacity':'1'},800)
+        s_img.eq(i).stop().fadeIn(600)
+        s_text.eq(i).stop().animate({'top':'0', 'opacity':'1'},800)
 
         autoslide = setInterval(auto, 6000)
     })
 
+
+    $('.con1_filter li').mouseover(function(){
+        $(this).find('div').css({'text-shadow':'none', 'color':'#ffffff'})
+    }).mouseout(function(){
+        $(this).find('div').css({'text-shadow':'0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff', 'color':'#000000'})
+    })
     $('.con1_main li').mouseover(function(){
         $(this).find('img').stop().animate({'opacity':'0.6'},80)
     }).mouseout(function(){

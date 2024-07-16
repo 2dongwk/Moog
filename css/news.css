@@ -10,8 +10,6 @@ body {background-color: #ffffff; font-family: inter-variable, sans-serif; font-v
 
 .clearfix::after {display: block; content:""; clear: both;}
 
-nav, .h_logo {mix-blend-mode: difference;}
-
 nav li {font-variation-settings: "slnt" 0, "wght" 300;}
 nav li:nth-child(4) {font-variation-settings: "slnt" 0, "wght" 700;}
 nav li:nth-child(4) a {opacity: 1;}

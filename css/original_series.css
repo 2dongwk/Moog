@@ -10,7 +10,7 @@ body {background-color: #000000; font-family: inter-variable, sans-serif; font-v
 
 .clearfix::after {display: block; content:""; clear: both;}
 
-nav, .h_logo {mix-blend-mode: normal;}
+nav, header {mix-blend-mode: normal;}
 
 nav li {font-variation-settings: "slnt" 0, "wght" 300;}
 nav li:nth-child(1) {font-variation-settings: "slnt" 0, "wght" 700;}
@@ -37,7 +37,10 @@ nav a {color: #eeeeee;}
     display: none;
 }
 
-.slider_img li:nth-child(1) {display: block;}
+.slider_img li:nth-child(1) {
+    opacity: 0.4;
+    display: block;
+}
 
 .slider .gradient_box, .slider_text {
     width: 100%;
@@ -52,8 +55,9 @@ nav a {color: #eeeeee;}
     width: 70%;
     height: 100%;
     position: absolute;
+    top: 6%;
     left: 8%;
-    bottom: 0;
+    opacity: 0;
 }
 
 .slider_text li:nth-child(4) {display: block;}
@@ -119,7 +123,6 @@ nav a {color: #eeeeee;}
     height: 200px;
     margin-top: 60px;
     position: relative;
-    border-bottom: 1px solid #999999
 }
 
 .con1_title h2 {
@@ -129,6 +132,20 @@ nav a {color: #eeeeee;}
     transform: translate(-50%, -50%);
     font-size: 50px;
     font-variation-settings: "slnt" 0, "wght" 600;
+}
+
+.borderline {
+    width: 0%;
+    margin: 0 auto;
+    border-top: 1px solid #999999;
+    /* animation-name: extend; */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes extend {
+    0% {width: 0;}
+    100% {width: 100%;}
 }
 
 .con1_filter {margin: 60px 0;}
@@ -144,14 +161,15 @@ nav a {color: #eeeeee;}
     font-variation-settings: "slnt" 0, "wght" 600;
     text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff;
     color: #000000;
-    transition-duration: 0.1s;
+    filter: blur(10px);
+    transition-duration: 1s;
+    opacity: 0;
     cursor: pointer;
 }
 
-.con1_filter li:hover {
-    text-shadow: none;
-    color: #ffffff;
-}
+.con1_filter div {transition-duration: 0.15s;}
+
+.con1_main, .con1_sub {opacity: 0;}
 
 .con1_main ul, .con1_sub ul {
     display: flex;
@@ -209,9 +227,12 @@ nav a {color: #eeeeee;}
 .con1_textbox {
     width: 40%;
     height: fit-content;
+    top: 0px;
+    opacity: 0;
 }
 
 .con1_textbox h4 {
+    margin-top: 40px;
     margin-bottom: 40px;
     font-size: 22px;
     line-height: 30px;

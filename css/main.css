@@ -11,6 +11,25 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 
 .clearfix::after {display: block; content:""; clear: both;}
 
+.showme {opacity: 0;}
+
+header {position: sticky;}
+
+h1 {top: 40px;}
+
+nav {
+    position: fixed;
+    top: 0;
+}
+
+nav a {
+    color: #ffffff;
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+nav a:hover {opacity: 0.4;}
+
 .content1, .con2_wrap, .content3 {
     width: calc(100% - 40px);
     margin: 0 auto;
@@ -20,6 +39,8 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
     width: 90%;
     margin: 60px auto;
 }
+
+.con1_main img {opacity: 0;}
 
 .con1_main h2 {
     width: 70%;
@@ -50,18 +71,23 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 
 .con1_main a path {fill: #000000;}
 
-.con1_sub {width: 100%;}
-
-.con1_sub img {
-    margin-bottom: 10px;
+.con1_sub {
+    width: 100%;
+    position: relative;
 }
+
+.con1_sub img {margin-bottom: 10px;}
 
 .con1_sub>div {
     width: calc(50% - 10px);
-    float: left;
+    position: absolute;
 }
 
-.con1_sub_left {margin-right: 20px;}
+.con1_sub_left {
+    left: 0;
+    top: 40px;
+    opacity: 0;
+}
 
 .con1_sub_left p, .con1_sub_left a {
     line-height: 44px;
@@ -69,14 +95,14 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
     font-variation-settings: "slnt" 0, "wght" 700;
 }
 
-.con1_sub_left a {
-    line-height: 50px;
-}
+.con1_sub_left a {line-height: 50px;}
 
 .con1_sub_right {
-    margin-bottom: 80px;
+    right: 0;
+    top: 40px;
     font-size: 12px;
     font-weight: 300;
+    opacity: 0;
 }
 
 .con1_sub_right_wrap {
@@ -102,14 +128,19 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
     text-align: center;
 }
 
-.con_header span {font-size: 11px;}
+.con_header span {
+    font-size: 11px;
+    filter: blur(10px);
+    opacity: 0;
+    transition-duration: 0.8s;
+}
 
 .con_header h3 {
     margin-top: 20px;
     margin-bottom: 32px;
     font-size: 48px;
     font-weight: 500;
-    line-height: 60px;
+    line-height: 1.4em;
     letter-spacing: -0.04em;
 }
 
@@ -120,6 +151,10 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
     font-variation-settings: "slnt" 0, "wght" 200;
     letter-spacing: 0.01em;
     line-height: 30px;
+    filter: blur(10px);
+    opacity: 0;
+    transition-duration: 0.8s;
+    transition-delay: 0.4s;
 }
 
 .con2_main p {
@@ -258,7 +293,10 @@ iframe {mix-blend-mode: multiply;}
     justify-content: space-between;
 }
 
-.con3_sub li {width: 32%;}
+.con3_sub li {
+    width: 32%;
+    opacity: 0;
+}
 
 .con3_sub img {
     aspect-ratio: 1 / 0.7;

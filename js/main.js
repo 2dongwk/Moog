@@ -1,41 +1,65 @@
 $(document).ready(function(){
-    var a = 0,
-        b = 0,
-        c = 0;
-
-    //---------------   헤더   ---------------
-    $('h1, .con1_main>img').css({'opacity':'0'})
     $('h1').animate({'top':'0', 'opacity':'1'},1200)
-    $('header li').css({'margin-top':'-30px', 'opacity':'0'})
-    .eq(0).delay(500).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(0).delay(600).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(1).delay(700).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(2).delay(800).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(3).delay(900).animate({'margin-top':'0', 'opacity':'1'},500)
-    .siblings('li').eq(4).delay(1000).animate({'margin-top':'0', 'opacity':'1'},500)
-    $('.con1_main>img').delay(1200).animate({'opacity':'1'},1600)
 
-    a=$(window).width()
-    b=$('h1').height()
-    $('.h_logo').css({'height':b})
-    c=(a/b)/100
-    a=1920-a
-    b=b-(78-((a*c)/2))
-    
-    $('.h_logo').css({'top':-b})
+    $(window).on('scroll',function(){
+        let scroll = $(window).scrollTop(),
+            window_h = $(window).height(),
+            window_btm = scroll + window_h,
+            content2 = $('.content2').offset().top,
+            content3 = $('.content3').offset().top;
 
-    $(window).resize(function(){
-        a=$(this).width()
-        b=$('h1').height()
-        $('.h_logo').css({'height':b})
-        c=(a/b)/100
-        a=1920-a
-        b=b-(78-((a*c)/2))
-        
-        $('.h_logo').css({'top':-b})
+        if(scroll > content2 - 30 && scroll < content3 - 140){
+            $('nav a, h1 path').addClass('black')
+            $('h1 path:last').css({'fill':'none', 'stroke':'#000000'})
+            $('.header_bg').addClass('whiteblur')
+        }else{
+            $('nav a, h1 path').removeClass('black')
+            $('h1 path:last').css({'fill':'none', 'stroke':'#ffffff'})
+            $('.header_bg').removeClass('whiteblur')
+        }
+
+        let con1_sub = $('.con1_sub').offset().top + ($('.con1_sub').height() * 0.3);
+
+        if(window_btm > con1_sub){
+            $('.con1_sub_left').animate({'top':'0', 'opacity':'1'},800)
+            $('.con1_sub_right').delay(300).animate({'top':'0', 'opacity':'1'},800)
+        }else{
+            $('.con1_sub_left, .con1_sub_right').css({'top':'40px', 'opacity':'0'})
+        }
+
+        $('.con_header').each(function(){
+            let con_header = $(this).offset().top + ($(this).height() * 0.1);
+
+            if(window_btm > con_header){
+                $(this).find('span, p').css({'filter':'none', 'opacity':'1'})
+            }
+        })
+
+        $('.showme').each(function(){
+            let showme_btm = $(this).offset().top + ($(this).height() * 0.3);
+            
+            if(window_btm > showme_btm){
+                $(this).animate({'opacity':'1'},800)
+            }
+        })
+
+        let con3_sub = $('.con3_sub').offset().top + ($('.con3_sub').height() * 0.1);
+
+        if(window_btm > con3_sub){
+            for(let i = 0; i<3; i++){
+                $('.con3_sub li').eq(i).delay(i*300).animate({'opacity':'1'},800)
+            }
+        }
     })
 
-    //---------------   메인 콘텐츠   ---------------
+    $('.con1_sub').css({'height':$('.con1_sub_right').height() + 80})
+    
+    $(window).resize(function(){
+        $('.con1_sub').css({'height':$('.con1_sub_right').height() + 80})
+    })
+
+    $('.con1_main img').delay(1000).animate({'opacity':'1'},1600)
+
     $('.con1_main a').mouseover(function(){
         $(this).css({'background-color':'#333333', 'color':'#ffffff'})
         .find('svg').stop().animate({'margin-left':'10px'},50)
