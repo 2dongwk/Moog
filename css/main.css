@@ -22,14 +22,6 @@ nav {
     top: 0;
 }
 
-nav a {
-    color: #ffffff;
-    opacity: 1;
-    transition-duration: 0.2s;
-}
-
-nav a:hover {opacity: 0.4;}
-
 .content1, .con2_wrap, .content3 {
     width: calc(100% - 40px);
     margin: 0 auto;

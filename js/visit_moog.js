@@ -1,28 +1,46 @@
 $(document).ready(function(){
-
     $('h1').delay(1100).animate({'top':'0', 'opacity':'1'},700)
 
-    var d = 0,
-        $h_con1_top = $('.con1_top_img').height(),
-        $h_con1_btm = $('.con1_btm_img1').height(),
-        $h_con2_top = $('.con2_top img').height(),
-        $h_con2_btm = $('.con2_btm img').height(),
-        e = 0,
-        f = 0,
-        g = 0,
-        h = 0;
-        //변수 이름 알아볼 수 있게 고치기
+    $(window).on('scroll',function(){
+        let scroll = $(this).scrollTop(),
+            window_h = $(this).height(),
+            window_btm = scroll + window_h,
+            content1 = $('.content1').offset().top,
+            content2 = $('.content2').offset().top;
 
-    $('.slider h2:first').css({'opacity':'0', 'top':'24%'})
-    $('.slider h2:first').delay(800).animate({'opacity':'1', 'top':'14.8%'},function(){
+        if(scroll > content1 - 30 && scroll < content2 - 30){
+            $('nav a, h1 path').addClass('black')
+            $('h1 path').css({'opacity':'1'})
+            $('h1 path:last').css({'fill':'none', 'stroke':'#000000'})
+            $('.header_bg').addClass('whiteblur')
+        }else{
+            $('nav a, h1 path').removeClass('black')
+            $('h1 path:last').css({'fill':'none', 'stroke':'#ffffff'})
+            $('.header_bg').removeClass('whiteblur')
+        }
+
+        let bgDist = scroll * 0.1;
+
+        $('.con1_top_img').css({'background-position-y':-bgDist})
+        $('.con1_btm_img1').css({'background-position-y':-bgDist + 200})
+
+        $('.showme').each(function(){
+            let showme_btm = $(this).offset().top + ($(this).height() * 0.2);
+            
+            if(window_btm > showme_btm){
+                $(this).animate({'opacity':'1'},600)
+                $(this).siblings('.showme_delay').delay(400).animate({'opacity':'1'},600)
+            }
+        })
+    })
+
+    $('.slider h2:first').delay(400).animate({'opacity':'1', 'top':'14.8%'},function(){
         $(this).animate({'top':'16.2%'},200,function(){
             $(this).animate({'top':'16%'},200)
         })
     })
-    $('.slider ul').css({'opacity':'0'})
-    $('.slider h2:nth-child(2)').css({'top':'63%', 'opacity':'0'})
     $('.slider ul').animate({'opacity':'1'},600)
-    $('.slider h2:nth-child(2)').delay(1600).animate({'top':'62%', 'opacity':'1'},800)
+    $('.slider h2:nth-child(2)').delay(1000).animate({'top':'62%', 'opacity':'1'},800)
 
     setInterval(function(){
         $('.slider ul').stop().animate({'left':'-100%'},1000,function(){
@@ -31,74 +49,71 @@ $(document).ready(function(){
         })
     },3000)
 
-    d=$('.carousel_group').width()
-    $('.text_carousel').animate({'left':-d},40000,'linear',function(){
+    $('.con1_top_icon').animate({'rotate':'20deg'},1000,function(){
+        $(this).animate({'rotate':'-5deg'},1000)
+    })
+
+    setInterval(function(){
+        $('.con1_top_icon').animate({'rotate':'20deg'},1000,function(){
+            $(this).animate({'rotate':'-5deg'},1000)
+        })
+    },2000)
+
+    let carousel = $('.carousel_group').width();
+
+    $('.text_carousel').animate({'left':-carousel},40000,'linear',function(){
         $('.carousel_group:first').appendTo('.text_carousel')
         $('.text_carousel').css({'left':'0'})
     })
 
     setInterval(function(){
-        d=$('.carousel_group').width()
-        $('.text_carousel').animate({'left':-d},40000,'linear',function(){
+        $('.text_carousel').animate({'left':-carousel},40000,'linear',function(){
             $('.carousel_group:first').appendTo('.text_carousel')
             $('.text_carousel').css({'left':'0'})
         })
     },40000)
 
-    $('.con1_top_icon').animate({'rotate':'20deg'},1000,function(){
-        $('.con1_top_icon').animate({'rotate':'-5deg'},1000)
+    let con1_top_h = $('.con1_top_img').height(),
+        con1_btm_h = $('.con1_btm_img1').height(),
+        con2_top_h = $('.con2_top img').height(),
+        con2_btm_h = $('.con2_btm img').height();
+
+    $('.con1_top').css({'height':con1_top_h})
+    $('.con1_btm').css({'height':con1_btm_h})
+    $('.con2_top .con2_slider ul').css({'height':con2_top_h})
+    $('.con2_btm .con2_slider ul').css({'height':con2_btm_h})
+
+    $('.con2_top').css({'height':con2_top_h + 150})
+    $('.con2_btm').css({'height':con2_btm_h + 150})
+
+    $(window).resize(function(){
+        $('.con1_top').css({'height':con1_top_h})
+        $('.con1_btm').css({'height':con1_btm_h})
+        $('.con2_top .con2_slider ul').css({'height':con2_top_h})
+        $('.con2_btm .con2_slider ul').css({'height':con2_btm_h})
+
+        $('.con2_top').css({'height':con2_top_h + 150})
+        $('.con2_btm').css({'height':con2_btm_h + 150})
     })
 
-    setInterval(function(){
-        $('.con1_top_icon').animate({'rotate':'20deg'},1000,function(){
-            $('.con1_top_icon').animate({'rotate':'-5deg'},1000)
-        })
-    },2000)
-
-    $('.con1_top').css({'height':$h_con1_top})
-    $('.con1_btm').css({'height':$h_con1_btm})
-    $('.con2_top .con2_slider ul').css({'height':$h_con2_top})
-    $('.con2_btm .con2_slider ul').css({'height':$h_con2_btm})
-    
-    $h_con2_top=$h_con2_top+150
-    $h_con2_btm=$h_con2_btm+150
-
-    $('.con2_top').css({'height':$h_con2_top})
-    $('.con2_btm').css({'height':$h_con2_btm})
+    let a = 0,
+        b = 0;
 
     $('.con2_top').find('.btn div').click(function(){
         $('.con2_top').find('li').stop().fadeOut(300)
         
-        e=$(this).index()
-        f=(f+((-2*e)+3))%4
+        let top_btn = $(this).index();
+        a=(a+((-2*top_btn)+3))%4
         
-        $('.con2_top').find('li').eq(f).stop().fadeIn(300)
+        $('.con2_top').find('li').eq(a).stop().fadeIn(300)
     })
 
     $('.con2_btm').find('.btn div').click(function(){
         $('.con2_btm').find('li').stop().fadeOut(300)
         
-        g=$(this).index()
-        h=(h+((-2*g)+3))%4
+        let btm_btn = $(this).index();
+        b=(b+((-2*btm_btn)+3))%4
         
-        $('.con2_btm').find('li').eq(h).stop().fadeIn(300)
-    })
-
-    $(window).resize(function(){
-        $h_con1_top=$('.con1_top_img').height()
-        $h_con1_btm=$('.con1_btm_img1').height()
-        $h_con2_top=$('.con2_top img').height()
-        $h_con2_btm=$('.con2_btm img').height()
-        
-        $('.con1_top').css({'height':$h_con1_top})
-        $('.con1_btm').css({'height':$h_con1_btm})
-        $('.con2_top .con2_slider ul').css({'height':$h_con2_top})
-        $('.con2_btm .con2_slider ul').css({'height':$h_con2_btm})
-        
-        $h_con2_top=$h_con2_top+150
-        $h_con2_btm=$h_con2_btm+150
-
-        $('.con2_top').css({'height':$h_con2_top})
-        $('.con2_btm').css({'height':$h_con2_btm})
+        $('.con2_btm').find('li').eq(b).stop().fadeIn(300)
     })
 })

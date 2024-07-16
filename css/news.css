@@ -10,7 +10,8 @@ body {background-color: #ffffff; font-family: inter-variable, sans-serif; font-v
 
 .clearfix::after {display: block; content:""; clear: both;}
 
-nav li {font-variation-settings: "slnt" 0, "wght" 300;}
+.showme, .showme_delay {opacity: 0;}
+
 nav li:nth-child(4) {font-variation-settings: "slnt" 0, "wght" 700;}
 nav li:nth-child(4) a {opacity: 1;}
 
@@ -24,8 +25,8 @@ nav a {color: #eeeeee;}
 
 .content1 a {font-weight: 500;}
 
-.main a, .content1 a {transition-duration: 0.2s;}
-.main a:hover {opacity: 0.6;}
+.main>a>p, .content1 a {transition-duration: 0.2s;}
+.main>a>p:hover {opacity: 0.6;}
 .content1 a:hover {opacity: 0.4;}
 
 .main {
@@ -151,6 +152,9 @@ h2 {
 }
 
 .content2 li a:hover {opacity: 1;}
+
+.content2 span {transition-duration: 0.2s;}
+.content2 span:hover {opacity: 0.7;}
 
 .content2 li:nth-child(1) {background: url(../img/news/5.webp) no-repeat;}
 .content2 li:nth-child(2) {background: url(../img/news/6.webp) no-repeat;}

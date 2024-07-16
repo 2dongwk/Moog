@@ -11,7 +11,6 @@ section {line-height: 1.6em;}
 
 .clearfix::after {display: block; content:""; clear: both;}
 
-nav li {font-variation-settings: "slnt" 0, "wght" 300;}
 nav li:nth-child(3) {font-variation-settings: "slnt" 0, "wght" 700; color: #000000;}
 nav li:nth-child(3) a {opacity: 1;}
 
@@ -106,7 +105,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-.products li {width: 32%;}
+.products li {width: 32%; opacity: 0;}
 
 .products li a {transition-duration: 0.15s;}
 .products li a:hover {opacity: 0.85;}

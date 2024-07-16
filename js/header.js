@@ -2,7 +2,7 @@ $(document).ready(function(){
     let header_height = 80 + $('h1 a').height(),
         window_width = $(window).width(),
         logo_height = $('h1 a').height(),
-        height_change = logo_height + (((window_width * ((1920 - window_width)/logo_height)/200)));
+        height_change = logo_height + (window_width*((1920 - window_width)/logo_height)/200);
 
         $('.header_wrap').css({'height':header_height})
         $('header').css({'top':-height_change})
@@ -13,10 +13,12 @@ $(document).ready(function(){
         }
 
     $(window).resize(function(){
+        header_height = 80 + $('h1 a').height(),
         window_width = $(window).width(),
         logo_height = $('h1 a').height(),
-        height_change = logo_height + (((window_width * ((1920 - window_width)/logo_height)/200)));
+        height_change = logo_height + (window_width*((1920 - window_width)/logo_height)/200);
 
+        $('.header_wrap').css({'height':header_height})
         $('header').css({'top':-height_change})
     })
 })

@@ -15,8 +15,8 @@ $(document).ready(function(){
             $('.header_bg').addClass('blur')
         }
 
-        let scroll = $(window).scrollTop(),
-            window_h = $(window).height(),
+        let scroll = $(this).scrollTop(),
+            window_h = $(this).height(),
             window_btm = scroll + window_h,
             con1_filter = $('.con1_filter').offset().top + ($('.con1_filter').height() * 0.3);
 

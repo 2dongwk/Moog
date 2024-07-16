@@ -2,14 +2,15 @@ $(document).ready(function(){
     $('h1').animate({'top':'0', 'opacity':'1'},1200)
 
     $(window).on('scroll',function(){
-        let scroll = $(window).scrollTop(),
-            window_h = $(window).height(),
+        let scroll = $(this).scrollTop(),
+            window_h = $(this).height(),
             window_btm = scroll + window_h,
             content2 = $('.content2').offset().top,
             content3 = $('.content3').offset().top;
 
         if(scroll > content2 - 30 && scroll < content3 - 140){
             $('nav a, h1 path').addClass('black')
+            $('h1 path').css({'opacity':'1'})
             $('h1 path:last').css({'fill':'none', 'stroke':'#000000'})
             $('.header_bg').addClass('whiteblur')
         }else{

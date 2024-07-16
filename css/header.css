@@ -10,9 +10,9 @@ body {background-color: #000000; font-family: inter-variable, sans-serif; font-v
 header, .header_bg, nav, nav ul, nav li, nav a, h1 {z-index: 999;}
 
 .blur {backdrop-filter: blur(10px);}
-.whiteblur {backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.4);}
+.whiteblur {backdrop-filter: blur(10px); background-color: rgba(255,255,255,0.5);}
 .white {color: #ffffff; fill: #ffffff;}
-.black {color: #000000; fill: #000000;}
+.black {color: #000000; fill: #000000; opacity: 0.4;}
 
 header {
     width: 100%;
@@ -26,8 +26,6 @@ header {
     height: 80px;
     position: fixed;
     top: 0;
-    /* background-color: rgba(255,255,255,0.4); */
-    /* backdrop-filter: blur(10px); */
     transition-duration: 0.3s;
 }
 
@@ -68,8 +66,6 @@ nav ul {
     justify-content: space-between;
     align-items: center;
 }
-
-nav li {font-variation-settings: "slnt" 0, "wght" 300;}
 
 nav a {
     color: #ffffff;
