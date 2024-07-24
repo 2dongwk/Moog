@@ -1,6 +1,9 @@
 $(document).ready(function(){
     $('h1').animate({'top':'0', 'opacity':'1'},1200)
 
+    let con1_sub_h = $('.con1_sub_right').height() + 80;
+    $('.con1_sub').css({'height':con1_sub_h})
+
     $(window).on('scroll',function(){
         let scroll = $(this).scrollTop(),
             window_h = $(this).height(),
@@ -52,10 +55,6 @@ $(document).ready(function(){
             }
         }
     })
-
-    let con1_sub_h = $('.con1_sub_right').height() + 80;
-
-    $('.con1_sub').css({'height':con1_sub_h})
     
     $(window).resize(function(){
         $('.con1_sub').css({'height':con1_sub_h})
