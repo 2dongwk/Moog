@@ -21,7 +21,7 @@ $(document).ready(function(){
             $('.header_bg').removeClass('whiteblur')
         }
 
-        let bgDist = scroll * 0.1;
+        let bgDist = scroll * 0.15;
 
         $('.con1_top_img').css({'background-position-y':-bgDist})
         $('.con1_btm_img1').css({'background-position-y':-bgDist + 200})
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
     $('.slider').css({'height':slider_h})
 
-    $('.slider h2:first').delay(400).animate({'opacity':'1', 'top':'18%'},function(){
+    $('.slider h2:first').delay(400).animate({'top':'18%', 'opacity':'1'},function(){
         $(this).animate({'top':'20%'},200,function(){
             $(this).animate({'top':'19.5%'},200)
         })
@@ -110,6 +110,13 @@ $(document).ready(function(){
 
         $('.con2_top').css({'height':con2_top_h + 150})
         $('.con2_btm').css({'height':con2_btm_h + 150})
+
+        slider_h = $('.slider li').height()*2
+
+        $('.slider').css({'height':slider_h})
+
+        $('.slider h2:first').css({'top':'19.5%'})
+        $('.slider h2:nth-child(2)').css({'top':'68%'})
 
         virtual = $('.virtual').height()
         content2_h = virtual + con2_top_h + con2_btm_h + 300
