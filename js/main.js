@@ -53,10 +53,12 @@ $(document).ready(function(){
         }
     })
 
-    $('.con1_sub').css({'height':$('.con1_sub_right').height() + 80})
+    let con1_sub_h = $('.con1_sub_right').height() + 80;
+
+    $('.con1_sub').css({'height':con1_sub_h})
     
     $(window).resize(function(){
-        $('.con1_sub').css({'height':$('.con1_sub_right').height() + 80})
+        $('.con1_sub').css({'height':con1_sub_h})
     })
 
     $('.con1_main img').delay(1000).animate({'opacity':'1'},1600)

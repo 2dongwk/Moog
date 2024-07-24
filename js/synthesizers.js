@@ -32,13 +32,16 @@ $(document).ready(function(){
         }
     })
 
-    $('article, .read_more').css({'opacity':'0'})
     $('article, .read_more').delay(1700).animate({'opacity':'1'},600)
 
     let img_h = $('.img1').height(),
         conBox_h = $('.products li:first').height(),
-        conAll_h = $('article').height();
+        conWrap_h = $('.Synthesizers').height(),
+        conAll_h = $('h2').height() + 220 + conWrap_h;
 
+    $('.products_wrap').css({'height':conWrap_h})
+    $('article').css({'height':conAll_h})
+    
     long_h = (img_h * 2)+(conBox_h - img_h)
     $('.img7').css({'height':long_h})
 
@@ -50,7 +53,31 @@ $(document).ready(function(){
         $('.page_divider').css({'display':'none'})
     })
 
+    $('.filter li').mouseover(function(){
+        $(this).css({'color':'#000000', 'text-shadow':'none'})
+    }).mouseout(function(){
+        $(this).css({'color':'#ffffff', 'text-shadow':'0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000'})
+    })
+
+    $('.filter li').click(function(){
+        $(this).addClass('filter_on').siblings('li').removeClass('filter_on')
+
+        let text = $(this).text(),
+            number = $(this).index();
+
+        $('h2').stop().fadeOut(50,function(){
+            $(this).text(text).stop().fadeIn(500)
+        })
+        $('.products_wrap').stop().fadeOut(50).eq(number).stop().fadeIn(500)
+    })
+
     $(window).resize(function(){
+        img_h = $('.img1').height(),
+        conBox_h = $('.products li:first').height(),
+        conWrap_h = $('.products_wrap>ul').height(),
+        conAll_h = $('article').height() + conWrap_h;
+        
+        $('.products_wrap').css({'height':conWrap_h})
         long_h = (img_h * 2)+(conBox_h - img_h)
         $('.img7').css({'height':long_h})
 

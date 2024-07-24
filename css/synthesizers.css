@@ -51,9 +51,9 @@ nav a {
     top: 70px;
 }
 
-.filter li:nth-child(1), .filter li:hover {
-    color: #000000;
-    text-shadow: none;
+.filter_on {
+    color: #000000!important;
+    text-shadow: none!important;
 }
 
 section {
@@ -66,6 +66,8 @@ section {
 
 article {
     width: 100%;
+    opacity: 0;
+    position: relative;
     overflow: hidden;
 }
 
@@ -74,20 +76,21 @@ article {
     margin: 0 auto;
     border-top: 1px solid #000000;
     animation-name: extend;
-    animation-duration: 1s;
-    animation-timing-function: linear;
+    animation-duration: 1.4s;
+    /* animation-timing-function: linear; */
     animation-fill-mode: forwards;
 }
 
 @keyframes extend {
-    0% {width: 0;}
     50% {width: 0;}
-    75% {width: 98%;}
     100% {width: 100%;}
 }
 
 h2 {
     margin-top: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     font-size: 70px;
     font-variation-settings: "slnt" 0, "wght" 600;
     letter-spacing: -0.03em;
@@ -96,14 +99,26 @@ h2 {
 
 .products {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 220px;
 }
 
-.products ul {
+.products_wrap {
+    width: 100%;
+    position: relative;
+}
+
+.products_wrap>ul, .long_height_wrap>ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.products_wrap>ul {
+    width: 100%;
+    position: absolute;
+}
+
+.long_height_wrap>ul {width: 100%;}
 
 .products li {width: 32%; opacity: 0;}
 
@@ -127,20 +142,24 @@ h2 {
 
 .img {height: 330px;}
 
-.img1 {background: url(../img/synthesizers/1.webp) no-repeat; background-size: cover; background-position: center;}
-.img2 {background: url(../img/synthesizers/2.webp) no-repeat; background-size: cover; background-position: center;}
-.img3 {background: url(../img/synthesizers/3.webp) no-repeat; background-size: cover; background-position: center;}
-.img4 {background: url(../img/synthesizers/4.webp) no-repeat; background-size: cover; background-position: center;}
-.img5 {background: url(../img/synthesizers/5.webp) no-repeat; background-size: cover; background-position: center;}
-.img6 {background: url(../img/synthesizers/6.webp) no-repeat; background-size: cover; background-position: center;}
-.sub_img {background: url(../img/synthesizers/6_sub.webp) no-repeat; background-size: cover; background-position: center;}
-.img7 {background: url(../img/synthesizers/7.webp) no-repeat; background-size: cover; background-position: center;}
-.img8 {background: url(../img/synthesizers/8.webp) no-repeat; background-size: cover; background-position: center;}
-.img9 {background: url(../img/synthesizers/9.webp) no-repeat; background-size: cover; background-position: center;}
-.img10 {background: url(../img/synthesizers/10.webp) no-repeat; background-size: cover; background-position: center;}
-.img11 {background: url(../img/synthesizers/11.webp) no-repeat; background-size: cover; background-position: center;}
-.img12 {background: url(../img/synthesizers/12.webp) no-repeat; background-size: cover; background-position: center;}
-.img13 {background: url(../img/synthesizers/13.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img1 {background: url(../img/Synthesizers/1.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img2 {background: url(../img/Synthesizers/2.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img3 {background: url(../img/Synthesizers/3.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img4 {background: url(../img/Synthesizers/4.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img5 {background: url(../img/Synthesizers/5.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img6 {background: url(../img/Synthesizers/6.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .sub_img {background: url(../img/Synthesizers/6_sub.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img7 {background: url(../img/Synthesizers/7.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img8 {background: url(../img/Synthesizers/8.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img9 {background: url(../img/Synthesizers/9.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img10 {background: url(../img/Synthesizers/10.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img11 {background: url(../img/Synthesizers/11.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img12 {background: url(../img/Synthesizers/12.webp) no-repeat; background-size: cover; background-position: center;}
+.Synthesizers .img13 {background: url(../img/Synthesizers/13.webp) no-repeat; background-size: cover; background-position: center;}
+
+.Theremins .img1 {background: url(../img/Synthesizers/Theremins/1.webp) no-repeat; background-size: cover; background-position: center;}
+.Theremins .img2 {background: url(../img/Synthesizers/Theremins/2.webp) no-repeat; background-size: cover; background-position: center;}
+.Theremins .img3 {background: url(../img/Synthesizers/Theremins/3.webp) no-repeat; background-size: cover; background-position: center;}
 
 .text {
     width: 100%;
@@ -187,7 +206,7 @@ h2 {
     color: #ffffff;
 }
 
-.products li:nth-child(10) {margin-left: 2%;}
+.Synthesizers li:nth-child(10) {margin-left: 2%;}
 
 .page_divider {
     width: 100%;
@@ -209,4 +228,8 @@ h2 {
     line-height: 48px;
     text-align: center;
     cursor: pointer;
+    opacity: 0;
 }
+
+h2, .products_wrap {display: none;}
+h2:nth-child(1), .products_wrap:nth-child(1) {display: block;}

@@ -6,7 +6,10 @@ $(document).ready(function(){
         s_text = $('.slider_text li'),
         i = 0;
 
-    $('.slider').css({'height':s_img_h * 0.9})
+    $('.slider, .slider_img').css({'height':s_img_h * 0.9})
+    $(window).resize(function(){
+        $('.slider, .slider_img').css({'height':s_img_h * 0.9})
+    })
 
     $(window).on('scroll',function(){
         if($(this).scrollTop() < 100){
@@ -42,10 +45,6 @@ $(document).ready(function(){
             $('.con1_textbox').animate({'opacity':'1'},800)
             $('.con1_textbox h4').animate({'margin-top':'0'},800)
         }
-    })
-
-    $(window).resize(function(){
-        $('.slider').css({'height':s_img_h * 0.9})
     })
 
     $('.slider_img li:first').animate({'opacity':'1'},1200)
@@ -84,11 +83,10 @@ $(document).ready(function(){
         autoslide = setInterval(auto, 6000)
     })
 
-
-    $('.con1_filter li').mouseover(function(){
-        $(this).find('div').css({'text-shadow':'none', 'color':'#ffffff'})
+    $('.con1_filter div').mouseover(function(){
+        $(this).css({'text-shadow':'none', 'color':'#ffffff'})
     }).mouseout(function(){
-        $(this).find('div').css({'text-shadow':'0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff', 'color':'#000000'})
+        $(this).css({'text-shadow':'0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff, 0 0 1px #ffffff', 'color':'#000000'})
     })
     $('.con1_main li').mouseover(function(){
         $(this).find('img').stop().animate({'opacity':'0.6'},80)
@@ -100,4 +98,22 @@ $(document).ready(function(){
     }).mouseout(function(){
         $(this).find('img').stop().animate({'opacity':'1'},80)
     })
+
+    $('.con1_filter').find('div').click(function(){
+        let text = $(this).text()
+
+        $('.con1_filter').find('div').removeClass('filter_on')
+        $(this).addClass('filter_on')
+        $('.con1_main, .con1_sub').find('li').stop().fadeOut(100)
+        $('.con1_main, .con1_sub').find("li:has(span:contains('"+text+"'))").stop().delay(99).fadeIn(600)
+
+        if($(this).hasClass('filter_all') == true){
+            $('.con1_main, .con1_sub').find('li').stop().fadeIn()
+        }
+    })
+
+    // $('.con1_filter').find("div:contains('Exploration')").click(function(){
+    //     $('.con1_main, .con1_sub').find('li').stop().fadeOut()
+    //     $('.con1_main, .con1_sub').find("li:has(span:contains('EXPLORATION'))").stop().fadeIn()
+    // })
 })

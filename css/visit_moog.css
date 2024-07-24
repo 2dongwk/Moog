@@ -20,8 +20,6 @@ nav a {color: #eeeeee;}
 
 .slider {
     width: 100%;
-    aspect-ratio: 1 / 0.4;
-    padding: 12% 0 5% 0;
     position: relative;
     overflow: hidden;
 }
@@ -29,7 +27,9 @@ nav a {color: #eeeeee;}
 .slider ul {
     width: 400%;
     position: absolute;
+    top: 50%;
     left: 0;
+    transform: translate(0, -50%);
     display: flex;
     opacity: 0;
 }
@@ -46,7 +46,7 @@ nav a {color: #eeeeee;}
 .slider h2 {
     width: 100%;
     position: absolute;
-    top: 24%;
+    top: 30%;
     font-size: 80px;
     font-variation-settings: "slnt" 0, "wght" 600;
     letter-spacing: -0.03em;
@@ -61,14 +61,14 @@ nav a {color: #eeeeee;}
 }
 
 .slider h2:nth-child(2) {
-    top: 63%;
+    top: 70%;
     font-size: 160px;
     z-index: 1;
 }
 
 .content1 {
     width: 100%;
-    padding-top: 3%;
+    /* padding-top: 3%; */
     position: relative;
     background-color: #ffffff;
     color: #000000;
@@ -78,6 +78,7 @@ nav a {color: #eeeeee;}
 .text_carousel {
     width: max-content;
     position: absolute;
+    top: 2%;
     left: 0;
     display: flex;
 }
@@ -95,7 +96,9 @@ nav a {color: #eeeeee;}
 
 .text_hooking {
     width: 60%;
-    margin: 140px auto;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 140px;
     font-size: 32px;
     font-weight: 600;
     text-align: center;

@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $('html, body').animate({scrollTop: 0},'fast')
+
     $('h1').delay(1100).animate({'top':'0', 'opacity':'1'},700)
 
     $(window).on('scroll',function(){
@@ -34,13 +36,17 @@ $(document).ready(function(){
         })
     })
 
-    $('.slider h2:first').delay(400).animate({'opacity':'1', 'top':'14.8%'},function(){
-        $(this).animate({'top':'16.2%'},200,function(){
-            $(this).animate({'top':'16%'},200)
+    let slider_h = $('.slider li').height()*2;
+
+    $('.slider').css({'height':slider_h})
+
+    $('.slider h2:first').delay(400).animate({'opacity':'1', 'top':'18%'},function(){
+        $(this).animate({'top':'20%'},200,function(){
+            $(this).animate({'top':'19.5%'},200)
         })
     })
     $('.slider ul').animate({'opacity':'1'},600)
-    $('.slider h2:nth-child(2)').delay(1000).animate({'top':'62%', 'opacity':'1'},800)
+    $('.slider h2:nth-child(2)').delay(1000).animate({'top':'68%', 'opacity':'1'},800)
 
     setInterval(function(){
         $('.slider ul').stop().animate({'left':'-100%'},1000,function(){
@@ -86,7 +92,17 @@ $(document).ready(function(){
     $('.con2_top').css({'height':con2_top_h + 150})
     $('.con2_btm').css({'height':con2_btm_h + 150})
 
+    let virtual = $('.virtual').height(),
+        content2_h = virtual + con2_top_h + con2_btm_h + 300;
+
+    $('.content2').css({'height':content2_h})
+
     $(window).resize(function(){
+        con1_top_h = $('.con1_top_img').height()
+        con1_btm_h = $('.con1_btm_img1').height()
+        con2_top_h = $('.con2_top img').height()
+        con2_btm_h = $('.con2_btm img').height()
+        
         $('.con1_top').css({'height':con1_top_h})
         $('.con1_btm').css({'height':con1_btm_h})
         $('.con2_top .con2_slider ul').css({'height':con2_top_h})
@@ -94,6 +110,11 @@ $(document).ready(function(){
 
         $('.con2_top').css({'height':con2_top_h + 150})
         $('.con2_btm').css({'height':con2_btm_h + 150})
+
+        virtual = $('.virtual').height()
+        content2_h = virtual + con2_top_h + con2_btm_h + 300
+
+        $('.content2').css({'height':content2_h})
     })
 
     let a = 0,
