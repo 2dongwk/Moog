@@ -3,6 +3,28 @@ $(document).ready(function(){
 
     $('h1').delay(1100).animate({'top':'0', 'opacity':'1'},700)
 
+    let slider_h = $('.slider li').height()*2;
+
+    $('.slider').css({'height':slider_h})
+
+    let con1_top_h = $('.con1_top_img').height(),
+        con1_btm_h = $('.con1_btm_img1').height(),
+        con2_top_h = $('.con2_top img').height(),
+        con2_btm_h = $('.con2_btm img').height();
+
+    $('.con1_top').css({'height':con1_top_h})
+    $('.con1_btm').css({'height':con1_btm_h})
+    $('.con2_top .con2_slider ul').css({'height':con2_top_h})
+    $('.con2_btm .con2_slider ul').css({'height':con2_btm_h})
+
+    $('.con2_top').css({'height':con2_top_h + 150})
+    $('.con2_btm').css({'height':con2_btm_h + 150})
+
+    let virtual = $('.virtual').height(),
+        content2_h = virtual + con2_top_h + con2_btm_h + 300;
+
+    $('.content2').css({'height':content2_h})
+
     $(window).on('scroll',function(){
         let scroll = $(this).scrollTop(),
             window_h = $(this).height(),
@@ -35,10 +57,6 @@ $(document).ready(function(){
             }
         })
     })
-
-    let slider_h = $('.slider li').height()*2;
-
-    $('.slider').css({'height':slider_h})
 
     $('.slider h2:first').delay(400).animate({'top':'18%', 'opacity':'1'},function(){
         $(this).animate({'top':'20%'},200,function(){
@@ -78,24 +96,6 @@ $(document).ready(function(){
             $('.text_carousel').css({'left':'0'})
         })
     },40000)
-
-    let con1_top_h = $('.con1_top_img').height(),
-        con1_btm_h = $('.con1_btm_img1').height(),
-        con2_top_h = $('.con2_top img').height(),
-        con2_btm_h = $('.con2_btm img').height();
-
-    $('.con1_top').css({'height':con1_top_h})
-    $('.con1_btm').css({'height':con1_btm_h})
-    $('.con2_top .con2_slider ul').css({'height':con2_top_h})
-    $('.con2_btm .con2_slider ul').css({'height':con2_btm_h})
-
-    $('.con2_top').css({'height':con2_top_h + 150})
-    $('.con2_btm').css({'height':con2_btm_h + 150})
-
-    let virtual = $('.virtual').height(),
-        content2_h = virtual + con2_top_h + con2_btm_h + 300;
-
-    $('.content2').css({'height':content2_h})
 
     $(window).resize(function(){
         con1_top_h = $('.con1_top_img').height()
