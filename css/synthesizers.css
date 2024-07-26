@@ -27,6 +27,7 @@ nav a {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    overflow: hidden;
 }
 
 .filter ul {width: 30%;}
@@ -61,7 +62,6 @@ section {
     margin: 0 auto;
     margin-bottom: 120px;
     position: relative;
-    overflow: hidden;
 }
 
 article {

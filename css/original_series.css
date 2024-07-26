@@ -99,6 +99,8 @@ nav a {color: #eeeeee;}
 
 .prev:hover, .next:hover {opacity: 0.8;}
 
+section {overflow: hidden;}
+
 .content1 {
     width: 90%;
     margin: 0 auto;
