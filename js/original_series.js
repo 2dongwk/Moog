@@ -111,9 +111,4 @@ $(document).ready(function(){
             $('.con1_main, .con1_sub').find('li').stop().fadeIn()
         }
     })
-
-    // $('.con1_filter').find("div:contains('Exploration')").click(function(){
-    //     $('.con1_main, .con1_sub').find('li').stop().fadeOut()
-    //     $('.con1_main, .con1_sub').find("li:has(span:contains('EXPLORATION'))").stop().fadeIn()
-    // })
 })
