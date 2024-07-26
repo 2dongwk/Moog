@@ -11,7 +11,10 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 
 .clearfix::after {display: block; content:""; clear: both;}
 
-.showme {opacity: 0;}
+.showme {
+    opacity: 0;
+    transition-duration: 0.8s;
+}
 
 header {position: sticky;}
 
@@ -79,6 +82,7 @@ nav {
     left: 0;
     top: 40px;
     opacity: 0;
+    transition-duration: 0.8s;
 }
 
 .con1_sub_left p, .con1_sub_left a {
@@ -95,6 +99,8 @@ nav {
     font-size: 12px;
     font-weight: 300;
     opacity: 0;
+    transition-duration: 0.8s;
+    transition-delay: 0.3s;
 }
 
 .con1_sub_right_wrap {

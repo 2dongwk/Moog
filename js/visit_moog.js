@@ -94,7 +94,7 @@ $(document).ready(function(){
     $('.slider h2:nth-child(2)').delay(1000).animate({'top':'68%', 'opacity':'1'},800)
 
     setInterval(function(){
-        $('.slider ul').stop().animate({'left':'-100%'},1000,function(){
+        $('.slider ul').animate({'left':'-100%'},1000,function(){
             $(this).find('li:first').appendTo(this)
             $(this).css({'left':'0'})
         })

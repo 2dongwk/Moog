@@ -29,8 +29,8 @@ $(document).ready(function(){
         let con1_sub = $('.con1_sub').offset().top + ($('.con1_sub').height() * 0.3);
 
         if(window_btm > con1_sub){
-            $('.con1_sub_left').animate({'top':'0', 'opacity':'1'},800)
-            $('.con1_sub_right').delay(300).animate({'top':'0', 'opacity':'1'},800)
+            $('.con1_sub_left').css({'top':'0', 'opacity':'1'})
+            $('.con1_sub_right').css({'top':'0', 'opacity':'1'})
         }else{
             $('.con1_sub_left, .con1_sub_right').css({'top':'40px', 'opacity':'0'})
         }
@@ -47,7 +47,9 @@ $(document).ready(function(){
             let showme_btm = $(this).offset().top + ($(this).height() * 0.3);
             
             if(window_btm > showme_btm){
-                $(this).animate({'opacity':'1'},800)
+                $(this).css({'opacity':'1'})
+            }else{
+                $(this).css({'opacity':'0'})
             }
         })
 
