@@ -11,6 +11,14 @@ h2, h3, h4, .con1_sub_right, .con_header>span, .con3_sub>p {font-family: termina
 
 .clearfix::after {display: block; content:""; clear: both;}
 
+.loading_page {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #999999;
+    z-index: 1000;
+}
+
 .showme {
     opacity: 0;
     transition-duration: 0.8s;

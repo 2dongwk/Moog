@@ -1,6 +1,13 @@
 $(document).ready(function(){
+    if(typeof jQuery == 'undefined'){
+        $('.wrap').css({'opacity':'0'})
+    }else{
+        $('.wrap').css({'opacity':'1'})
+        $('.loading_page').slideUp()
+    }
+    
     $('h1').animate({'top':'0', 'opacity':'1'},1200)
-
+    
     let con1_sub_h = $('.con1_sub_right').height() + 80;
     $('.con1_sub').css({'height':con1_sub_h})
 
