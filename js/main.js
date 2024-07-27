@@ -1,12 +1,12 @@
 $(document).ready(function(){
     $('h1').animate({'top':'0', 'opacity':'1'},1200)
     
-    let con1_sub_h = $('.con1_sub_right').height() + 80;
-    $('.con1_sub').css({'height':con1_sub_h})
+    // let con1_sub_h = $('.con1_sub_right').height() + 80;
+    // $('.con1_sub').css({'height':con1_sub_h})
 
-    $(window).resize(function(){
-        $('.con1_sub').css({'height':con1_sub_h})
-    })
+    // $(window).resize(function(){
+    //     $('.con1_sub').css({'height':con1_sub_h})
+    // })
 
     $(window).on('scroll',function(){
         let scroll = $(this).scrollTop(),
@@ -97,9 +97,4 @@ $(document).ready(function(){
         $(this).find('img, p').stop().animate({'opacity':'1'},200)
         $(this).find('.arrow').stop().animate({'rotate':'0deg'},200)
     })
-    
-})
-
-$(window).on("load",function(){
-    $('.loading_page').fadeOut()
 })
