@@ -97,9 +97,9 @@ $(document).ready(function(){
         $(this).find('img, p').stop().animate({'opacity':'1'},200)
         $(this).find('.arrow').stop().animate({'rotate':'0deg'},200)
     })
-
+    
 })
 
-$(window).on('load',function(){
+$(window).on("load",function(){
     $('.loading_page').fadeOut()
 })
