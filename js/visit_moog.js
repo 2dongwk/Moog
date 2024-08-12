@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     $('h1').delay(1100).animate({'top':'0', 'opacity':'1'},700)
 
-    let slider_h = $('.slider li').height()*2;
+    let slider_h = $('.slider li img').height()*2;
 
     $('.slider').css({'height':slider_h})
 

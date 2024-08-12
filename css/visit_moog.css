@@ -41,7 +41,9 @@ nav a {color: #eeeeee;}
     align-items: center;
 }
 
-.slider li img {width: 40%;}
+.slider li img {
+    width: 40%;
+}
 
 .slider h2 {
     width: 100%;
